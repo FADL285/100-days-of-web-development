@@ -1,35 +1,34 @@
 const path = require('path');
 const fs = require('fs');
 const express = require('express');
+const ejs = require('ejs');
 const app = express();
 const port = process.env.PORT || 3000;
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: true }));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 app.get('/', (req, res) => {
-  const htmlFilePath = path.join(__dirname, 'views', 'index.html');
-  res.sendFile(htmlFilePath);
+  res.render('index');
 });
 
 app.get('/about', (req, res) => {
-  const htmlFilePath = path.join(__dirname, 'views', 'about.html');
-  res.sendFile(htmlFilePath);
+  res.render('about');
 });
 
 app.get('/restaurants', (req, res) => {
-  const htmlFilePath = path.join(__dirname, 'views', 'restaurants.html');
-  res.sendFile(htmlFilePath);
+  res.render('restaurants');
 });
 
 app.get('/recommend', (req, res) => {
-  const htmlFilePath = path.join(__dirname, 'views', 'recommend.html');
-  res.sendFile(htmlFilePath);
+  res.render('recommend');
 });
 
 app.get('/confirm', (req, res) => {
-  const htmlFilePath = path.join(__dirname, 'views', 'confirm.html');
-  res.sendFile(htmlFilePath);
+  res.render('confirm');
 });
 
 app.post('/recommend', (req, res) => {
