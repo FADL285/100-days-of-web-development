@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Mohamed Fadl",
+    "address": "El Mahalla El Kubra",
+    "cuisine": "Egyptian",
+    "website": "",
+    "description": "A short description, explaining why this restaurant is awesome!"
+  },
+  {
+    "name": "Fadl",
+    "address": "El-Mahalla",
+    "cuisine": "Egyptian",
+    "website": "http://127.0.0.1:3000/recommend",
+    "description": "A short description, explaining why this restaurant is awesome!"
+  }
+]
