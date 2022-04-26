@@ -1,0 +1,17 @@
+<li class="restaurant-item">
+    <article>
+        <h2><%= restaurant.name %></h2>
+        <div class="restaurant-meta">
+            <p> <%= restaurant.cuisine %> </p>
+            <p>Address: <%= restaurant.address %> </p>
+        </div>
+        <p>
+            <%= restaurant.description %>
+        </p>
+        <% if (restaurant.website !== '') { %>
+            <div class="restaurant-actions">
+                <a href="<%= restaurant.website %>" target="_blank" class="btn btn-primary">View Website</a>
+            </div>
+        <% } %>
+    </article>
+</li>
