@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head') %>
+    <link rel="stylesheet" href="/assets/styles/restaurants.css" />
+  </head>
+  <body>
+    <%- include('includes/header') %>
+    <%- include('includes/aside') %>
+    <main>
+      <h1><%= restaurant.name %></h1>
+      <p><%= restaurant.cuisine %> | <%= restaurant.address %></p>
+      <p><%= restaurant.description %></p>
+      <p>
+        <% if (restaurant.website !== '') { %>
+          <a href="<%= restaurant.website %>" target="_blank" class="btn btn-primary">View Website</a>
+        <% } else { %>
+          No Site Provided.
+        <% } %>
+      </p>
+    </main>
+  </body>
+</html>
